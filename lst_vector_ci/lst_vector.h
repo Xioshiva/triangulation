@@ -7,7 +7,7 @@
 #include <math.h>
 #include <stdbool.h>
 #include "error.c"
-
+//nothing here works pls ignore
 typedef int type;
 
 typedef struct_element {

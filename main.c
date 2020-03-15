@@ -30,7 +30,7 @@ bool test_arguments(int argc, char *argv[]){
     return 1;
 }
 
-int *make_filter_list(double probability, uint32_t num_points){
+int *make_filter_list(double probability, uint32_t num_points){//makes list to filet points
     
     srand(time(NULL));
     int *list_int = malloc(sizeof(int) * num_points);
@@ -60,10 +60,13 @@ int main(int argc, char *argv[]){
 
 	header h = header_from_file(argv[1]);
 	point_3d *list_3d = points_from_file(argv[1], h, &h.num_point_records);
+    point_3d_print(&list_3d[0]);
+    point_3d_print(&list_3d[1]);
+    point_3d_print(&list_3d[2]);
 
 
     int *filter_list = make_filter_list(atof(argv[2]), h.num_point_records);
-	vector_2d_from_list_with_filter(list_3d, &p2d, h.num_point_records/2, filter_list); // JSP pas pq mon header donne pile le double de num_points
+	vector_2d_from_list_with_filter(list_3d, &p2d, h.num_point_records/2, filter_list); // For some reason num_points_record is multiplied by 2
 	vector_3d_from_list_with_filter(list_3d, &p3d, h.num_point_records/2, filter_list);
 	
 

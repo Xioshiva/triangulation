@@ -10,8 +10,8 @@
 
 #include <string.h>
 
-double findMaxMin(vector_2d *p, char *search);
-void add_super_triangle(vector_2d *p, vector_i_triangle *t);
-void bowyer_watson(vector_2d *p, vector_i_triangle *t);
+double findMaxMin(vector_2d *p, char *search);//find what you want in list depending on char * you give
+void add_super_triangle(vector_2d *p, vector_i_triangle *t);//puts super triangle in vector2d
+void bowyer_watson(vector_2d *p, vector_i_triangle *t);//makes the triangulation
 
 #endif

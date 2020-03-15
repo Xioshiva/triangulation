@@ -150,9 +150,9 @@ void bowyer_watson(vector_2d *points, vector_i_triangle *vec_triangle){
 			{
 				for (int l = 0; l < very_bad_triangles.length; l++)
 				{
-					if(l == jj){
+					if(l == jj){//If used triangle is tested skip it instead
 						l++;
-						if (l == very_bad_triangles.length){
+						if (l == very_bad_triangles.length){//If it was the last its good and push it
 							vector_i_edge_push(&vec_edge ,list_edge[k]);
 							break;
 						}

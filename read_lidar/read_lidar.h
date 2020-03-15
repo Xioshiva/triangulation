@@ -59,14 +59,14 @@ typedef struct __attribute__((__packed__)) {
 } point_record_1;
 
 
-header header_from_file(char *fname);
+header header_from_file(char *fname);//gets header from lidar file
 void print_header(header *h);
-point_3d *points_from_file(char *fname, header h, uint32_t *num_points);
+point_3d *points_from_file(char *fname, header h, uint32_t *num_points);//makes a list of point3d from the lidar file
 void print_point_record(point_record_1 *p);
-void vector_2d_from_list(point_3d *list_pt3d, vector_2d *v,  uint32_t num_points);
-void vector_3d_from_list(point_3d *list_pt3d, vector_3d *v,  uint32_t num_points);
-void vector_2d_from_list_with_filter(point_3d *list_pt3d, vector_2d *v,  uint32_t num_points, int *list_filter);
-void vector_3d_from_list_with_filter(point_3d *list_pt3d, vector_3d *v,  uint32_t num_points, int *list_filter);
+void vector_2d_from_list(point_3d *list_pt3d, vector_2d *v,  uint32_t num_points);//fills a vector2d from the point3d list
+void vector_3d_from_list(point_3d *list_pt3d, vector_3d *v,  uint32_t num_points);//same but fills vector3d
+void vector_2d_from_list_with_filter(point_3d *list_pt3d, vector_2d *v,  uint32_t num_points, int *list_filter);//same but takes filter to take a certain number of points
+void vector_3d_from_list_with_filter(point_3d *list_pt3d, vector_3d *v,  uint32_t num_points, int *list_filter);//same but with point3d
 
 
 #endif

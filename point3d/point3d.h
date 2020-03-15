@@ -13,7 +13,7 @@ typedef struct {
 	double x, y, z;
 } point_3d;
 
-//bool point_is_null(point_3d *p);
+
 point_3d point_3d_create(double x, double y, double z);
 void point_3d_add_inplace(point_3d *p1, point_3d *p2);
 void point_3d_sub_inplace(point_3d *p1, point_3d *p2);

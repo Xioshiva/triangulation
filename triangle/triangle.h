@@ -13,7 +13,7 @@ typedef struct {
 triangle triangle_create(point_3d v1, point_3d v2, point_3d v3);
 point_3d triangle_compute_normal(triangle *t);
 double triangle_compute_area(triangle *t);
-triangle *triangle_from_i_triangle(vector_3d *p, vector_i_triangle i_t);
+triangle *triangle_from_i_triangle(vector_3d *p, vector_i_triangle i_t);//creates a list of 3dtriangles form a vector i triangle
 void triangle_print(triangle *t);
 
 
