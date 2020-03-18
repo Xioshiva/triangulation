@@ -60,9 +60,6 @@ int main(int argc, char *argv[]){
 
 	header h = header_from_file(argv[1]);
 	point_3d *list_3d = points_from_file(argv[1], h, &h.num_point_records);
-    point_3d_print(&list_3d[0]);
-    point_3d_print(&list_3d[1]);
-    point_3d_print(&list_3d[2]);
 
 
     int *filter_list = make_filter_list(atof(argv[2]), h.num_point_records);
